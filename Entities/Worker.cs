@@ -14,5 +14,17 @@ namespace Worker.Entities
         {
             Contracts.Add(contract);
         }
+
+        public void removeContract(HourContract contract)
+        {
+            Contracts.Remove(contract);
+        }
+
+        public double income()
+        {
+            return 0;
+        }
+        
+        
     }
 }
