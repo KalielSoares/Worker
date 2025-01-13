@@ -5,13 +5,19 @@ namespace Worker.Entities
     public class HourContract
     {
         public DateTime Date { get; set; }
-        public double ValuePerHNour { get; set; }
+        public double ValuePerHour { get; set; }
         public int Hours { get; set; }
 
-
-        public double totalValue()
+        public HourContract(DateTime date, double valuePerHour, int hours)
         {
-            return ValuePerHNour * Hours;
+            Date = date;
+            ValuePerHour = valuePerHour;
+            Hours = hours;
+        }
+
+        public double TotalValue()
+        {
+            return Hours * ValuePerHour;
         }
     }
 }
